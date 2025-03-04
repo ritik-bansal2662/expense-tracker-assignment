@@ -1,17 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ExpenseForm from "./components/ExpenseForm";
+import ExpenseList from "./components/ExpenseList";
+import TotalExpenses from "./components/TotalExpenses";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div className='text-5xl'>
-        Ram Ram Ji!!!
-      </div>
-    </>
+    <div className="app-container p-5">
+        <h1>Expense Tracker</h1>
+        <ExpenseForm onExpenseAdded={() => window.location.reload()} />
+        <ExpenseList />
+        <TotalExpenses />
+    </div>
   )
 }
 
